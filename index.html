@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152f">
+
+<title>Bubu Creator's | Websites That Grow Businesses</title>
+
+<meta name="description" content="Professional websites for American businesses. Premium web design starting at $500. Get your free quote today.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #07152f;
+    --blue: #123b78;
+    --light: #d9f4ff;
+    --cyan: #36d9df;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6faff;
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--navy);
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--cyan);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--cyan);
+}
+
+select {
+    padding: 9px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 600px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background:
+    radial-gradient(circle at 80% 30%, #1769a5, transparent 35%),
+    linear-gradient(120deg, #07152f, #123b78);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tag {
+    color: var(--cyan);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d9eaff;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 27px;
+    background: var(--cyan);
+    color: var(--navy);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #36d9df55;
+}
+
+.button-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--cyan);
+    margin-left: 10px;
+}
+
+section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 17px;
+    box-shadow: 0 5px 25px #102b5010;
+    border: 1px solid #e4edf8;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.icon {
+    font-size: 32px;
+}
+
+.price-section {
+    background: #eaf7ff;
+}
+
+.price-box {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 25px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 35px #0b285018;
+}
+
+.old-price {
+    color: #8996a9;
+    text-decoration: line-through;
+    font-size: 23px;
+}
+
+.price {
+    font-size: 65px;
+    font-weight: bold;
+    color: #123b78;
+}
+
+.price span {
+    font-size: 22px;
+}
+
+.price-box ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.price-box li {
+    padding: 7px;
+}
+
+.highlight {
+    color: #087e86;
+    font-weight: bold;
+}
+
+.portfolio-card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 25px #102b5010;
+}
+
+.portfolio-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #07152f, #1b75a8);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.portfolio-card div:last-child {
+    padding: 20px;
+}
+
+.form-section {
+    background: linear-gradient(130deg, #07152f, #123b78);
+    color: white;
+}
+
+.form-section .section-title p {
+    color: #d5e7ff;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 9px;
+    border: 1px solid #d5e3f1;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
+    font-size: 16px;
+}
+
+.review-note {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #050e20;
+    color: white;
+    padding: 45px 8%;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px;
+    color: #b9c9df;
+}
+
+footer a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #20c968;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    z-index: 100;
+    box-shadow: 0 5px 20px #0003;
+}
+
+@media(max-width:650px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 75px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .button-outline {
+        margin: 12px 0 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Bubu <span>Creator's</span></div>
+
+    <nav>
+        <a href="#home" data-t="nav1">Home</a>
+        <a href="#services" data-t="nav2">Services</a>
+        <a href="#portfolio" data-t="nav3">Portfolio</a>
+        <a href="#reviews" data-t="nav4">Reviews</a>
+        <a href="#contact" data-t="nav5">Contact</a>
+    </nav>
+
+    <select id="language" onchange="changeLanguage()">
+        <option value="en">🇺🇸 English</option>
+        <option value="pt">🇧🇷 Português</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+    </select>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="tag" data-t="tag">Your business deserves to grow</div>
+
+        <h1 data-t="heroTitle">
+            Your business deserves a
+            <span>powerful website.</span>
+        </h1>
+
+        <p data-t="heroText">
+            Professional websites designed to build trust,
+            attract customers and help your business grow.
+            Your online presence starts here.
+        </p>
+
+        <a href="#contact" class="button" data-t="heroButton">
+            Get a Free Quote
+        </a>
+
+        <a href="#services" class="button button-outline" data-t="heroButton2">
+            Explore Services
+        </a>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-title">
+        <h2 data-t="servicesTitle">What We Create</h2>
+        <p data-t="servicesText">Everything your business needs to stand out online.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3 data-t="service1">Professional Websites</h3>
+            <p data-t="service1Text">Modern, responsive websites that represent your brand.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3 data-t="service2">Mobile Experience</h3>
+            <p data-t="service2Text">Beautiful experiences on phones, tablets and computers.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3 data-t="service3">Business Growth</h3>
+            <p data-t="service3Text">Strategic layouts designed to encourage customer action.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3 data-t="service4">Unique Design</h3>
+            <p data-t="service4Text">A website that reflects your business identity.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="price-section">
+    <div class="section-title">
+        <h2 data-t="priceTitle">Your Business. Your Website. Your Future.</h2>
+        <p data-t="priceText">Professional quality at an accessible starting price.</p>
+    </div>
+
+    <div class="price-box">
+
+        <p data-t="compare">Agency packages can reach</p>
+
+        <div class="old-price">$3,000 USD</div>
+
+        <div class="price">$500 <span>USD</span></div>
+
+        <p class="highlight" data-t="offer">Your professional website starting at just $500!</p>
+
+        <ul>
+            <li>✓ <span data-t="feature1">Custom website design</span></li>
+            <li>✓ <span data-t="feature2">Mobile-friendly layout</span></li>
+            <li>✓ <span data-t="feature3">Business information and contact</span></li>
+            <li>✓ <span data-t="feature4">Strategic call-to-action buttons</span></li>
+            <li>✓ <span data-t="feature5">Professional presentation</span></li>
+        </ul>
+
+        <a href="#contact" class="button" data-t="priceButton">Request Your Free Quote</a>
+
+        <p style="font-size:12px;color:#778;margin-top:18px" data-t="priceDisclaimer">
+            Final pricing depends on project scope and requirements.
+        </p>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="section-title">
+        <h2 data-t="portfolioTitle">Our Creative Vision</h2>
+        <p data-t="portfolioText">Explore examples of website concepts we can create.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="portfolio-card">
+            <div class="portfolio-image">LUXURY REAL ESTATE</div>
+            <div>
+                <h3>Real Estate</h3>
+                <p>Elegant presentation for property businesses.</p>
+                <small>Concept project</small>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-image">BEAUTY STUDIO</div>
+            <div>
+                <h3>Beauty & Wellness</h3>
+                <p>Modern websites for beauty professionals.</p>
+                <small>Concept project</small>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-image">LOCAL BUSINESS</div>
+            <div>
+                <h3>Small Businesses</h3>
+                <p>Professional digital presence for local companies.</p>
+                <small>Concept project</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="reviews">
+    <div class="section-title">
+        <h2 data-t="reviewsTitle">Client Experiences</h2>
+        <p data-t="reviewsText">Your opinion helps our community grow.</p>
+    </div>
+
+    <p class="review-note" data-t="reviewNote">
+        Be among the first to share your experience with Bubu Creator's.
+    </p>
+
+    <form name="reviews" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="reviews">
+
+        <input type="text" name="name" placeholder="Your name" required>
+
+        <select name="rating" required>
+            <option value="">Choose your rating</option>
+            <option value="5 stars">⭐⭐⭐⭐⭐</option>
+            <option value="4 stars">⭐⭐⭐⭐</option>
+            <option value="3 stars">⭐⭐⭐</option>
+            <option value="2 stars">⭐⭐</option>
+            <option value="1 star">⭐</option>
+        </select>
+
+        <textarea name="review" placeholder="Share your experience..." required></textarea>
+
+        <button class="button" type="submit" data-t="reviewButton">
+            Submit Review
+        </button>
+    </form>
+</section>
+
+<section class="form-section" id="contact">
+
+    <div class="section-title">
+        <h2 data-t="contactTitle">Let's Build Something Great!</h2>
+
+        <p data-t="contactText">
+            Tell us about your business and receive a free quote.
+        </p>
+    </div>
+
+    <form name="quote" method="POST" data-netlify="true">
+
+        <input type="hidden" name="form-name" value="quote">
+
+        <input type="text" name="name" placeholder="Your full name" required>
+
+        <input type="email" name="email" placeholder="Your email address" required>
+
+        <input type="text" name="business" placeholder="Business name">
+
+        <input type="text" name="country" placeholder="Country">
+
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+
+        <button class="button" type="submit" data-t="contactButton">
+            Request Free Quote
+        </button>
+
+    </form>
+
+    <p style="text-align:center;margin-top:25px">
+        <span data-t="direct">Prefer direct contact?</span>
+        <br><br>
+        <a class="button" href="https://wa.me/5527992855786" target="_blank">
+            WhatsApp Us
+        </a>
+    </p>
+
+</section>
+
+</main>
+
+<footer>
+    <div class="logo">Bubu <span>Creator's</span></div>
+
+    <p data-t="footerText">Creating digital opportunities for growing businesses.</p>
+
+    <p>WhatsApp: +55 (27) 99285-5786</p>
+
+    <p>© 2026 Bubu Creator's. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5527992855786" target="_blank">
+    ☎ WhatsApp
+</a>
+
+<script>
+const translations = {
+
+en: {
+nav1:"Home",nav2:"Services",nav3:"Portfolio",nav4:"Reviews",nav5:"Contact",
+tag:"Your business deserves to grow",
+heroTitle:'Your business deserves a <span>powerful website.</span>',
+heroText:"Professional websites designed to build trust, attract customers and help your business grow. Your online presence starts here.",
+heroButton:"Get a Free Quote",heroButton2:"Explore Services",
+servicesTitle:"What We Create",
+servicesText:"Everything your business needs to stand out online.",
+service1:"Professional Websites",service1Text:"Modern, responsive websites that represent your brand.",
+service2:"Mobile Experience",service2Text:"Beautiful experiences on phones, tablets and computers.",
+service3:"Business Growth",service3Text:"Strategic layouts designed to encourage customer action.",
+service4:"Unique Design",service4Text:"A website that reflects your business identity.",
+priceTitle:"Your Business. Your Website. Your Future.",
+priceText:"Professional quality at an accessible starting price.",
+compare:"Agency packages can reach",offer:"Your professional website starting at just $500!",
+feature1:"Custom website design",feature2:"Mobile-friendly layout",
+feature3:"Business information and contact",feature4:"Strategic call-to-action buttons",
+feature5:"Professional presentation",
+priceButton:"Request Your Free Quote",
+priceDisclaimer:"Final pricing depends on project scope and requirements.",
+portfolioTitle:"Our Creative Vision",
+portfolioText:"Explore examples of website concepts we can create.",
+reviewsTitle:"Client Experiences",reviewsText:"Your opinion helps our community grow.",
+reviewNote:"Be among the first to share your experience with Bubu Creator's.",
+reviewButton:"Submit Review",
+contactTitle:"Let's Build Something Great!",
+contactText:"Tell us about your business and receive a free quote.",
+contactButton:"Request Free Quote",direct:"Prefer direct contact?",
+footerText:"Creating digital opportunities for growing businesses."
+},
+
+pt: {
+nav1:"Início",nav2:"Serviços",nav3:"Portfólio",nav4:"Avaliações",nav5:"Contato",
+tag:"Seu negócio merece crescer",
+heroTitle:'Seu negócio merece um <span>site poderoso.</span>',
+heroText:"Sites profissionais criados para transmitir confiança, atrair clientes e ajudar sua empresa a crescer.",
+heroButton:"Solicitar orçamento grátis",heroButton2:"Conhecer serviços",
+servicesTitle:"O que criamos",servicesText:"Tudo o que sua empresa precisa para se destacar na internet.",
+service1:"Sites profissionais",service1Text:"Sites modernos e adaptáveis que representam sua marca.",
+service2:"Experiência mobile",service2Text:"Experiência incrível em celulares, tablets e computadores.",
+service3:"Crescimento empresarial",service3Text:"Estruturas estratégicas para incentivar ações dos clientes.",
+service4:"Design exclusivo",service4Text:"Um site que representa a identidade da sua empresa.",
+priceTitle:"Seu negócio. Seu site. Seu futuro.",
+priceText:"Qualidade profissional com preço acessível.",
+compare:"Pacotes de agências podem chegar a",
+offer:"Seu site profissional a partir de apenas US$ 500!",
+feature1:"Design personalizado",feature2:"Layout adaptado para celulares",
+feature3:"Informações e contato da empresa",feature4:"Botões estratégicos de ação",
+feature5:"Apresentação profissional",
+priceButton:"Solicitar orçamento grátis",
+priceDisclaimer:"O preço final depende do tamanho e das necessidades do projeto.",
+portfolioTitle:"Nossa visão criativa",
+portfolioText:"Conheça exemplos de projetos que podemos desenvolver.",
+reviewsTitle:"Experiências dos clientes",reviewsText:"Sua opinião ajuda nossa comunidade a crescer.",
+reviewNote:"Seja um dos primeiros a compartilhar sua experiência com a Bubu Creator's.",
+reviewButton:"Enviar avaliação",
+contactTitle:"Vamos construir algo incrível!",
+contactText:"Conte-nos sobre sua empresa e receba um orçamento gratuito.",
+contactButton:"Solicitar orçamento grátis",direct:"Prefere contato direto?",
+footerText:"Criando oportunidades digitais para empresas em crescimento."
+},
+
+es: {
+nav1:"Inicio",nav2:"Servicios",nav3:"Portafolio",nav4:"Reseñas",nav5:"Contacto",
+tag:"Tu negocio merece crecer",
+heroTitle:'Tu negocio merece un <span>sitio web poderoso.</span>',
+heroText:"Sitios web profesionales diseñados para generar confianza, atraer clientes y hacer crecer tu negocio.",
+heroButton:"Presupuesto gratis",heroButton2:"Ver servicios",
+servicesTitle:"Lo que creamos",servicesText:"Todo lo que tu negocio necesita para destacar en internet.",
+service1:"Sitios profesionales",service1Text:"Sitios modernos y adaptables para representar tu marca.",
+service2:"Experiencia móvil",service2Text:"Experiencias increíbles en teléfonos, tablets y computadoras.",
+service3:"Crecimiento empresarial",service3Text:"Diseños estratégicos para incentivar acciones de los clientes.",
+service4:"Diseño exclusivo",service4Text:"Un sitio web que refleja la identidad de tu negocio.",
+priceTitle:"Tu negocio. Tu sitio. Tu futuro.",
+priceText:"Calidad profesional a un precio accesible.",
+compare:"Los paquetes de agencias pueden alcanzar",
+offer:"¡Tu sitio profesional desde solo US$ 500!",
+feature1:"Diseño personalizado",feature2:"Adaptado a dispositivos móviles",
+feature3:"Información y contacto empresarial",feature4:"Botones estratégicos",
+feature5:"Presentación profesional",
+priceButton:"Solicitar presupuesto gratis",
+priceDisclaimer:"El precio final depende del alcance del proyecto.",
+portfolioTitle:"Nuestra visión creativa",
+portfolioText:"Explora ejemplos de proyectos que podemos crear.",
+reviewsTitle:"Experiencias de clientes",reviewsText:"Tu opinión ayuda a nuestra comunidad a crecer.",
+reviewNote:"Sé uno de los primeros en compartir tu experiencia.",
+reviewButton:"Enviar reseña",
+contactTitle:"¡Construyamos algo increíble!",
+contactText:"Cuéntanos sobre tu negocio y recibe un presupuesto gratuito.",
+contactButton:"Solicitar presupuesto gratis",direct:"¿Prefieres contacto directo?",
+footerText:"Creando oportunidades digitales para empresas en crecimiento."
+},
+
+fr: {
+nav1:"Accueil",nav2:"Services",nav3:"Portfolio",nav4:"Avis",nav5:"Contact",
+tag:"Votre entreprise mérite de grandir",
+heroTitle:'Votre entreprise mérite un <span>site web puissant.</span>',
+heroText:"Des sites professionnels conçus pour inspirer confiance, attirer des clients et développer votre entreprise.",
+heroButton:"Devis gratuit",heroButton2:"Découvrir les services",
+servicesTitle:"Ce que nous créons",servicesText:"Tout ce dont votre entreprise a besoin pour se démarquer en ligne.",
+service1:"Sites professionnels",service1Text:"Des sites modernes et adaptatifs pour votre marque.",
+service2:"Expérience mobile",service2Text:"Une expérience exceptionnelle sur tous les appareils.",
+service3:"Croissance commerciale",service3Text:"Des mises en page stratégiques pour attirer les clients.",
+service4:"Design unique",service4Text:"Un site qui reflète l'identité de votre entreprise.",
+priceTitle:"Votre entreprise. Votre site. Votre avenir.",
+priceText:"Une qualité professionnelle à un prix accessible.",
+compare:"Les forfaits d'agences peuvent atteindre",
+offer:"Votre site professionnel à partir de seulement 500 $ US !",
+feature1:"Design personnalisé",feature2:"Adapté aux mobiles",
+feature3:"Informations et contact",feature4:"Boutons d'action stratégiques",
+feature5:"Présentation professionnelle",
+priceButton:"Demander un devis gratuit",
+priceDisclaimer:"Le prix final dépend des besoins du projet.",
+portfolioTitle:"Notre vision créative",
+portfolioText:"Découvrez des exemples de projets que nous pouvons créer.",
+reviewsTitle:"Expériences clients",reviewsText:"Votre avis aide notre communauté à grandir.",
+reviewNote:"Soyez parmi les premiers à partager votre expérience.",
+reviewButton:"Envoyer un avis",
+contactTitle:"Créons quelque chose d'incroyable !",
+contactText:"Parlez-nous de votre entreprise et recevez un devis gratuit.",
+contactButton:"Demander un devis gratuit",direct:"Vous préférez un contact direct ?",
+footerText:"Créer des opportunités numériques pour les entreprises en croissance."
+}
+
+};
+
+function changeLanguage() {
+    const lang = document.getElementById("language").value;
+    const data = translations[lang];
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-t]").forEach(element => {
+        const key = element.getAttribute("data-t");
+        if(data[key]) {
+            element.innerHTML = data[key];
+        }
+    });
+}
+</script>
+
+</body>
+</html>
